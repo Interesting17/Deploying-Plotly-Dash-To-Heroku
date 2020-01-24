@@ -9,7 +9,7 @@ from dash.dependencies import Input, Output
 from dash.exceptions import PreventUpdate
 from plotly import graph_objects as go
 from Traffic_View_Class import Traffic_View as TV
-
+"""
 data = pd.read_excel('FootTrafficUpdate.xlsx')
 data = data.drop(columns = 'Unnamed: 0')
 print(data.columns)
@@ -97,7 +97,7 @@ Sum_All = 0
 for i in List_Traffic_All:
     Sum_All = Sum_All + i 
 
-
+"""
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.COSMO])
 server = app.server
 
