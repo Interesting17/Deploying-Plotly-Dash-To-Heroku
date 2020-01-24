@@ -1,5 +1,6 @@
 import pandas as pd
 import dash
+import os 
 import statistics as stc
 import datetime as dt 
 import dash_core_components as dcc
@@ -100,8 +101,11 @@ Sum_All = 0
 for i in List_Traffic_All:
     Sum_All = Sum_All + i 
 
+server = Flask(__name__)
+server.secret_key = os.environ.get('secret_key', 'secret')
+#app = dash.Dash(name = __name__, server = server)
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.COSMO])
+app = dash.Dash(__name__, server = server, external_stylesheets=[dbc.themes.COSMO])
 server = app.server
 
 app.config['suppress_callback_exceptions'] = True
@@ -156,7 +160,6 @@ def pie_figure(year):
     return fig.to_dict()
 
     
-    if __name__ == '__main__':
-    app.run_server()
+    
 
    
