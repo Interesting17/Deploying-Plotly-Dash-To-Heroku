@@ -9,7 +9,7 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 from dash.exceptions import PreventUpdate
 from plotly import graph_objects as go
-from Traffic_View_Class import Traffic_View as TV
+
 
 data = pd.read_excel('FootTrafficUpdate.xlsx')
 data = data.drop(columns = 'Unnamed: 0')
