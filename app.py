@@ -10,7 +10,7 @@ from dash.exceptions import PreventUpdate
 from plotly import graph_objects as go
 from Traffic_View_Class import Traffic_View as TV
 
-data = pd.read_csv('FootTrafficUpdate.csv')
+data = pd.read_excel('FootTrafficUpdate.xlsx')
 data = data.drop(columns = 'Unnamed: 0')
 print(data.columns)
 
