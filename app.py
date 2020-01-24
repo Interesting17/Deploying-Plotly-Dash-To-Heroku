@@ -18,8 +18,8 @@ print(data.columns)
 indexNames = data[ data['Traffic'] == 'Not Working' ].index
 data.drop(indexNames , inplace=True)
 
-image_saco = 'saco_logo.jpg'
-image_17 = '17.png'
+#image_saco = 'saco_logo.jpg'
+#image_17 = '17.png'
 
 for i in range(data.shape[0]):
     if data.iloc[i,5] == 1:
@@ -107,9 +107,9 @@ app.layout = html.Div([
        
     dbc.Row([html.Br(), html.Br(),
              dbc.Col(lg=1),
-             dbc.Col([html.Img(src=app.get_asset_url('saco_logo.png'))], lg= 1),
+             #dbc.Col([html.Img(src=app.get_asset_url('saco_logo.png'))], lg= 1),
              dbc.Col([html.Br(), html.Br(), html.Div([html.P("SACO Foot Traffic Dashboard")], style={'textAlign': "center", 'font-size':'300%', 'font-family':'Roboto Condensed', 'font-weight': 'bold'})]),  
-             dbc.Col([html.Img(src=app.get_asset_url('17.png'))], lg= 1),
+             #dbc.Col([html.Img(src=app.get_asset_url('17.png'))], lg= 1),
              dbc.Col(lg=1)
               ]),
 
